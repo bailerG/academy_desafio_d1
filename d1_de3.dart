@@ -1,6 +1,4 @@
 // Tempo total: 48:25,02
-
-const vogais = 'aeiou';
 const consoantes = 'bcdfghjklmnpqrstvwxyz';
 void main() {
   final texto =
@@ -53,13 +51,9 @@ int contaFrases(String texto) {
 
 // Conta o numero de vogais existentes no texto;
 int contaVogais(String texto) {
-  int contador = 0;
-  for (final letra in texto.runes) {
-    final caractere = String.fromCharCode(letra);
-    if (vogais.contains(caractere)) {
-      contador++;
-    }
-  }
+  RegExp regex = RegExp('[aeiou]');
+  final percorreTexto = regex.allMatches(texto);
+  final contador = percorreTexto.length;
   return contador;
 }
 
