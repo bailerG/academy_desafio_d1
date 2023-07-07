@@ -4,7 +4,10 @@ void main() {
     17,
     23,
   ];
-  print(somaMetodoLista(listaNumeros));
+  print('For: ${somaFor(listaNumeros)}');
+  print('While: ${somaWhile(listaNumeros)}');
+  print('Recursao: ${somaRecursivo(listaNumeros)}');
+  print('Lista: ${somaMetodoLista(listaNumeros)}');
 }
 
 int somaFor(List<int> listaNumeros) {
